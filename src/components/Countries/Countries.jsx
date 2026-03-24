@@ -11,11 +11,17 @@ const Countries = ({ countriesPromise }) => {
 
     const handleVisitedCountries = (country) => {
         console.log("handleVisitedCountries clicked" ,country);
+        const newVisitedCountries = [...visitedCountries,country];
+        setVisitedCountries(newVisitedCountries);
     }
 
     return (
         <div >
             <h1>In the countries: {countries.length} </h1>
+            <h2>Visited Countries:{visitedCountries.length}</h2>
+            <ol>
+                {visitedCountries.map(country => <li key={country.cca3.cca3}>{country.name.common}</li> )}
+            </ol>
 
             <div className='countries'>
                 {
