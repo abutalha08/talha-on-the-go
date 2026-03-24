@@ -1,8 +1,9 @@
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 import './Country.css'
 
-const Country = ({ country }) => {
-    console.log(country.flags.flags.png)
+const Country = ({ country, handleVisitedCountries }) => {
+    // console.log(country.flags.flags.png)
+    // console.log(handleVisitedCountries)
     
     const [visited, setVisited] = useState(false) //for Not visited button 
     const handleVisited = ()=>{
@@ -21,6 +22,7 @@ const Country = ({ country }) => {
 
         //3
         setVisited(!visited)
+        handleVisitedCountries(country);
     }
     return (
         <div className={`country ${visited && "country-visited"}`}>
