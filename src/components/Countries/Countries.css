@@ -5,6 +5,20 @@
     margin-top: 50px;
 }
 
+/* Tablet (<= 768px) */
+@media (max-width: 768px) {
+    .countries {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (<= 576px) */
+@media (max-width: 576px) {
+    .countries {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .content{
     text-align: center;
 }
