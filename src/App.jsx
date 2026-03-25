@@ -13,8 +13,8 @@ function App() {
   return (
     <>
 
-     <h2>Talha on the go</h2>
-     <Suspense fallback = {<p>Talha loading.......</p> }>
+     
+     <Suspense fallback = {<p>Countries loading.......</p> }>
       <Countries countriesPromise ={countriesPromise}></Countries>
      </Suspense>
      
